@@ -1,0 +1,43 @@
+1. Instalacia django do pythonu:
+    pip install django
+    pip list
+2. Vytvorenie ddjango projektu:
+    django-admin startproject nazov_projektu .
+3. Nastavenie slovenciny pre projekt (mysite/settings.py):
+    LANGUAGE_CODE = 'sk'
+    TIME_ZONE = 'CEST'
+4. Spustenie vyvojove servera:
+    python manage.py runserver
+    python.exe .\manage.py runserver
+5. Vytvorenie aplikacie:
+    python manage.py startapp nazov_apliklacie
+6. Zaregistrovanie aplikacie do projektu (nazov_projektu/settings.py):
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'nazov_apliklacie',
+    ]
+7. Vytvorenie jednoducheho views (nazov_apliklacie/views.py)
+    from django.shortcuts import render, HttpResponse
+    # Create your views here.
+    def index(request):
+        return HttpResponse('Hello world ¿')
+8. Vytvorenie urlpattern:
+8.1 nazov_projektu/urls.py
+    urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('nazov_apliklacie/', include('nazov_apliklacie.urls')),
+    ]
+8.2
+- vytvorit subor urls.py v priecinku aplikacie (skuska.py)
+- upravit urls.py:
+    from django.urls import path, include
+    from . import views
+
+    urlpatterns = [
+        path('', views.index, name='index'),
+    ]
