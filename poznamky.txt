@@ -41,3 +41,12 @@
     urlpatterns = [
         path('', views.index, name='index'),
     ]
+9. Template
+9.1
+- vytvorit v priecinku aplikacie priecinok templates/nazov_aplikacie
+- v tomto priecinku vytvorit subor (napr. index.html)
+9.2 upravit views tak, aby pouzival templates
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'kalkulacka/index.html')
