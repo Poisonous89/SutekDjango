@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'tuniak',
     'kalkulacka',
     'cisla',
+    'skuska',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'sk'
 
-TIME_ZONE = 'CEST'
+TIME_ZONE = 'Europe/Bratislava'
 
 USE_I18N = True
 
