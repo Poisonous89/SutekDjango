@@ -35,12 +35,12 @@
 8.2
 - vytvorit subor urls.py v priecinku aplikacie (skuska.py)
 - upravit urls.py:
-    from django.urls import path, include
-    from . import views
+from django.urls import path, include
+from . import views
 
-    urlpatterns = [
-        path('', views.index, name='index'),
-    ]
+urlpatterns = [
+    path('', views.index, name='index'),
+]
 9. Template
 9.1
 - vytvorit v priecinku aplikacie priecinok templates/nazov_aplikacie
